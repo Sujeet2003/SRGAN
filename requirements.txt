@@ -2,3 +2,4 @@ torch
 torchvision
 torchaudio
 opencv-python
+libgl1-mesa-glx
