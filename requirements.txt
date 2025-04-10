@@ -1,5 +1,4 @@
 torch
 torchvision
 torchaudio
-opencv-python-headless
-libgl1-mesa-glx
+opencv-python
