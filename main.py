@@ -39,7 +39,7 @@ uploaded_file = st.file_uploader("Upload a low-resolution image", type=["png", "
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Low-Resolution Input", use_column_width=True)
+    st.image(image, caption="Low-Resolution Input", use_container_width=True)
 
     if st.button("Enhance Image"):
         with st.spinner("Enhancing..."):
@@ -48,5 +48,5 @@ if uploaded_file:
             with torch.no_grad():
                 output = model(img_LR)
             result_img = postprocess_image(output)
-            st.image(result_img, caption="Enhanced Image", use_column_width=True)
+            st.image(result_img, caption="Enhanced Image", use_container_width=True)
             st.success("Enhancement complete!")
